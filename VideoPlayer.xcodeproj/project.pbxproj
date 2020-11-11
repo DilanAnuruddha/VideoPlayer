@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,7 @@
 		9890BEE8F8540406E25E4D01 /* Pods_VideoPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF8D9A4CE23E06B048785D /* Pods_VideoPlayer.framework */; };
 		C30C2DCC60877247A06F8A13 /* Pods_VideoPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AB13EA0A95EA2EF0A005C8 /* Pods_VideoPlayerTests.framework */; };
 		FE7CB679255BAB7900B5034F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB678255BAB7900B5034F /* AppDelegate.swift */; };
-		FE7CB67D255BAB7900B5034F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB67C255BAB7900B5034F /* ViewController.swift */; };
+		FE7CB67D255BAB7900B5034F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB67C255BAB7900B5034F /* LoginViewController.swift */; };
 		FE7CB682255BAB7C00B5034F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7CB681255BAB7C00B5034F /* Assets.xcassets */; };
 		FE7CB685255BAB7C00B5034F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7CB683255BAB7C00B5034F /* LaunchScreen.storyboard */; };
 		FE7CB690255BAB7D00B5034F /* VideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB68F255BAB7D00B5034F /* VideoPlayerTests.swift */; };
@@ -47,7 +47,7 @@
 		E9B9983BDF253A7BA0AB9369 /* Pods-VideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayer.release.xcconfig"; path = "Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		FE7CB675255BAB7900B5034F /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7CB678255BAB7900B5034F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE7CB67C255BAB7900B5034F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE7CB67C255BAB7900B5034F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FE7CB681255BAB7C00B5034F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE7CB684255BAB7C00B5034F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE7CB686255BAB7C00B5034F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,8 +107,127 @@
 				8BDBF75BC5B2BFBFD5C8ABDA /* Pods-VideoPlayerTests.debug.xcconfig */,
 				A9BDF35EAE655BDA913454AD /* Pods-VideoPlayerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE46EE56255BB58E008168CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE7CB681255BAB7C00B5034F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE46EE57255BB5C1008168CC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FE7CB678255BAB7900B5034F /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FE46EE58255BB5DF008168CC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE7CB683255BAB7C00B5034F /* LaunchScreen.storyboard */,
+				FE7CB686255BAB7C00B5034F /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		FE46EE59255BB714008168CC /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				FE46EE5D255BB79D008168CC /* View */,
+				FE46EE5C255BB758008168CC /* Interactor */,
+				FE46EE5B255BB74D008168CC /* Presenter */,
+				FE46EE5A255BB742008168CC /* Entity */,
+				FE46EE5E255BBD0B008168CC /* Router */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		FE46EE5A255BB742008168CC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FE46EE5B255BB74D008168CC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FE46EE5C255BB758008168CC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FE46EE5D255BB79D008168CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE7CB67C255BAB7900B5034F /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE46EE5E255BBD0B008168CC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FE46EE5F255BC2B5008168CC /* PlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				FE46EE62255BC47F008168CC /* View */,
+				FE46EE63255BC48A008168CC /* Interactor */,
+				FE46EE64255BC498008168CC /* Presenter */,
+				FE46EE65255BC4A5008168CC /* Entity */,
+				FE46EE61255BC475008168CC /* Router */,
+			);
+			path = PlayerModule;
+			sourceTree = "<group>";
+		};
+		FE46EE61255BC475008168CC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FE46EE62255BC47F008168CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE46EE63255BC48A008168CC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FE46EE64255BC498008168CC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FE46EE65255BC4A5008168CC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		FE7CB66C255BAB7800B5034F = {
@@ -136,11 +255,11 @@
 		FE7CB677255BAB7900B5034F /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				FE7CB678255BAB7900B5034F /* AppDelegate.swift */,
-				FE7CB67C255BAB7900B5034F /* ViewController.swift */,
-				FE7CB681255BAB7C00B5034F /* Assets.xcassets */,
-				FE7CB683255BAB7C00B5034F /* LaunchScreen.storyboard */,
-				FE7CB686255BAB7C00B5034F /* Info.plist */,
+				FE46EE5F255BC2B5008168CC /* PlayerModule */,
+				FE46EE59255BB714008168CC /* LoginModule */,
+				FE46EE58255BB5DF008168CC /* Support Files */,
+				FE46EE56255BB58E008168CC /* Resources */,
+				FE46EE57255BB5C1008168CC /* App */,
 			);
 			path = VideoPlayer;
 			sourceTree = "<group>";
@@ -400,7 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE7CB67D255BAB7900B5034F /* ViewController.swift in Sources */,
+				FE7CB67D255BAB7900B5034F /* LoginViewController.swift in Sources */,
 				FE7CB679255BAB7900B5034F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
