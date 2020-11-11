@@ -12,12 +12,18 @@
 		C30C2DCC60877247A06F8A13 /* Pods_VideoPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AB13EA0A95EA2EF0A005C8 /* Pods_VideoPlayerTests.framework */; };
 		FE46EE6E255BCC23008168CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE46EE6D255BCC23008168CC /* Constants.swift */; };
 		FE46EE76255BCCA6008168CC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE46EE75255BCCA6008168CC /* Alert.swift */; };
+		FE7BA39B255BF5EB009F0959 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BA39A255BF5EB009F0959 /* Extensions.swift */; };
+		FE7BA3B4255BFA49009F0959 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BA3B3255BFA49009F0959 /* PaddingTextField.swift */; };
+		FE7BA3B9255C0241009F0959 /* CheckConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BA3B8255C0241009F0959 /* CheckConnection.swift */; };
+		FE7BA3BE255C0302009F0959 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BA3BD255C0302009F0959 /* PlayerViewController.swift */; };
 		FE7CB679255BAB7900B5034F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB678255BAB7900B5034F /* AppDelegate.swift */; };
 		FE7CB67D255BAB7900B5034F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB67C255BAB7900B5034F /* LoginViewController.swift */; };
 		FE7CB682255BAB7C00B5034F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7CB681255BAB7C00B5034F /* Assets.xcassets */; };
 		FE7CB685255BAB7C00B5034F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7CB683255BAB7C00B5034F /* LaunchScreen.storyboard */; };
 		FE7CB690255BAB7D00B5034F /* VideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB68F255BAB7D00B5034F /* VideoPlayerTests.swift */; };
 		FE7CB69B255BAB7D00B5034F /* VideoPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB69A255BAB7D00B5034F /* VideoPlayerUITests.swift */; };
+		FEABBBE8255C32D100CF1C05 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEABBBE7255C32D100CF1C05 /* PlayerView.swift */; };
+		FEABBBFE255C60E800CF1C05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEABBBFD255C60E800CF1C05 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,10 @@
 		E9B9983BDF253A7BA0AB9369 /* Pods-VideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayer.release.xcconfig"; path = "Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		FE46EE6D255BCC23008168CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FE46EE75255BCCA6008168CC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		FE7BA39A255BF5EB009F0959 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FE7BA3B3255BFA49009F0959 /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
+		FE7BA3B8255C0241009F0959 /* CheckConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckConnection.swift; sourceTree = "<group>"; };
+		FE7BA3BD255C0302009F0959 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		FE7CB675255BAB7900B5034F /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7CB678255BAB7900B5034F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE7CB67C255BAB7900B5034F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +71,8 @@
 		FE7CB696255BAB7D00B5034F /* VideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7CB69A255BAB7D00B5034F /* VideoPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerUITests.swift; sourceTree = "<group>"; };
 		FE7CB69C255BAB7D00B5034F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEABBBE7255C32D100CF1C05 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		FEABBBFD255C60E800CF1C05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +137,6 @@
 		FE46EE57255BB5C1008168CC /* App */ = {
 			isa = PBXGroup;
 			children = (
-				FE7CB678255BAB7900B5034F /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -133,8 +144,8 @@
 		FE46EE58255BB5DF008168CC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FE7CB683255BAB7C00B5034F /* LaunchScreen.storyboard */,
-				FE7CB686255BAB7C00B5034F /* Info.plist */,
+				FE7BA3B3255BFA49009F0959 /* PaddingTextField.swift */,
+				FEABBBE7255C32D100CF1C05 /* PlayerView.swift */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -144,6 +155,8 @@
 			children = (
 				FE46EE6D255BCC23008168CC /* Constants.swift */,
 				FE46EE75255BCCA6008168CC /* Alert.swift */,
+				FE7BA39A255BF5EB009F0959 /* Extensions.swift */,
+				FE7BA3B8255C0241009F0959 /* CheckConnection.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -173,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				FE7CB67C255BAB7900B5034F /* LoginViewController.swift */,
+				FE7BA3BD255C0302009F0959 /* PlayerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,6 +195,10 @@
 			isa = PBXGroup;
 			children = (
 				FE7CB677255BAB7900B5034F /* VideoPlayer */,
+				FE7CB686255BAB7C00B5034F /* Info.plist */,
+				FEABBBFD255C60E800CF1C05 /* GoogleService-Info.plist */,
+				FE7CB683255BAB7C00B5034F /* LaunchScreen.storyboard */,
+				FE7CB678255BAB7900B5034F /* AppDelegate.swift */,
 				FE7CB68E255BAB7D00B5034F /* VideoPlayerTests */,
 				FE7CB699255BAB7D00B5034F /* VideoPlayerUITests */,
 				FE7CB676255BAB7900B5034F /* Products */,
@@ -342,6 +360,7 @@
 			files = (
 				FE7CB685255BAB7C00B5034F /* LaunchScreen.storyboard in Resources */,
 				FE7CB682255BAB7C00B5034F /* Assets.xcassets in Resources */,
+				FEABBBFE255C60E800CF1C05 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,8 +488,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEABBBE8255C32D100CF1C05 /* PlayerView.swift in Sources */,
+				FE7BA39B255BF5EB009F0959 /* Extensions.swift in Sources */,
+				FE7BA3BE255C0302009F0959 /* PlayerViewController.swift in Sources */,
+				FE7BA3B4255BFA49009F0959 /* PaddingTextField.swift in Sources */,
 				FE7CB67D255BAB7900B5034F /* LoginViewController.swift in Sources */,
 				FE7CB679255BAB7900B5034F /* AppDelegate.swift in Sources */,
+				FE7BA3B9255C0241009F0959 /* CheckConnection.swift in Sources */,
 				FE46EE76255BCCA6008168CC /* Alert.swift in Sources */,
 				FE46EE6E255BCC23008168CC /* Constants.swift in Sources */,
 			);
@@ -643,7 +667,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJ922C8VS4;
-				INFOPLIST_FILE = VideoPlayer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -663,7 +688,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJ922C8VS4;
-				INFOPLIST_FILE = VideoPlayer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

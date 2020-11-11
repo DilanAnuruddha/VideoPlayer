@@ -7,6 +7,7 @@ target 'VideoPlayer' do
 
   # Pods for VideoPlayer
     pod 'Alamofire', '~> 5.2'
+    pod 'Firebase/Analytics'
 
   target 'VideoPlayerTests' do
     inherit! :search_paths
