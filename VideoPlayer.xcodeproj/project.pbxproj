@@ -10,6 +10,8 @@
 		193EF992FDC7B78A024613C5 /* Pods_VideoPlayer_VideoPlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADDCE221B41A87099CD150E /* Pods_VideoPlayer_VideoPlayerUITests.framework */; };
 		9890BEE8F8540406E25E4D01 /* Pods_VideoPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF8D9A4CE23E06B048785D /* Pods_VideoPlayer.framework */; };
 		C30C2DCC60877247A06F8A13 /* Pods_VideoPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AB13EA0A95EA2EF0A005C8 /* Pods_VideoPlayerTests.framework */; };
+		FE46EE6E255BCC23008168CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE46EE6D255BCC23008168CC /* Constants.swift */; };
+		FE46EE76255BCCA6008168CC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE46EE75255BCCA6008168CC /* Alert.swift */; };
 		FE7CB679255BAB7900B5034F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB678255BAB7900B5034F /* AppDelegate.swift */; };
 		FE7CB67D255BAB7900B5034F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB67C255BAB7900B5034F /* LoginViewController.swift */; };
 		FE7CB682255BAB7C00B5034F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7CB681255BAB7C00B5034F /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		AADDCE221B41A87099CD150E /* Pods_VideoPlayer_VideoPlayerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoPlayer_VideoPlayerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AB13EA0A95EA2EF0A005C8 /* Pods_VideoPlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoPlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B9983BDF253A7BA0AB9369 /* Pods-VideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayer.release.xcconfig"; path = "Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		FE46EE6D255BCC23008168CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FE46EE75255BCCA6008168CC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		FE7CB675255BAB7900B5034F /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7CB678255BAB7900B5034F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE7CB67C255BAB7900B5034F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -135,99 +139,42 @@
 			path = "Support Files";
 			sourceTree = "<group>";
 		};
-		FE46EE59255BB714008168CC /* LoginModule */ = {
+		FE46EE6C255BCBF9008168CC /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				FE46EE5D255BB79D008168CC /* View */,
-				FE46EE5C255BB758008168CC /* Interactor */,
-				FE46EE5B255BB74D008168CC /* Presenter */,
-				FE46EE5A255BB742008168CC /* Entity */,
-				FE46EE5E255BBD0B008168CC /* Router */,
+				FE46EE6D255BCC23008168CC /* Constants.swift */,
+				FE46EE75255BCCA6008168CC /* Alert.swift */,
 			);
-			path = LoginModule;
+			path = Common;
 			sourceTree = "<group>";
 		};
-		FE46EE5A255BB742008168CC /* Entity */ = {
+		FE46EE7A255BF388008168CC /* Service */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Entity;
+			path = Service;
 			sourceTree = "<group>";
 		};
-		FE46EE5B255BB74D008168CC /* Presenter */ = {
+		FE46EE7B255BF397008168CC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Presenter;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		FE46EE5C255BB758008168CC /* Interactor */ = {
+		FE46EE7C255BF3AD008168CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Interactor;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		FE46EE5D255BB79D008168CC /* View */ = {
+		FE46EE7D255BF3C3008168CC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				FE7CB67C255BAB7900B5034F /* LoginViewController.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FE46EE5E255BBD0B008168CC /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		FE46EE5F255BC2B5008168CC /* PlayerModule */ = {
-			isa = PBXGroup;
-			children = (
-				FE46EE62255BC47F008168CC /* View */,
-				FE46EE63255BC48A008168CC /* Interactor */,
-				FE46EE64255BC498008168CC /* Presenter */,
-				FE46EE65255BC4A5008168CC /* Entity */,
-				FE46EE61255BC475008168CC /* Router */,
-			);
-			path = PlayerModule;
-			sourceTree = "<group>";
-		};
-		FE46EE61255BC475008168CC /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		FE46EE62255BC47F008168CC /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FE46EE63255BC48A008168CC /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		FE46EE64255BC498008168CC /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		FE46EE65255BC4A5008168CC /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		FE7CB66C255BAB7800B5034F = {
@@ -255,10 +202,13 @@
 		FE7CB677255BAB7900B5034F /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				FE46EE5F255BC2B5008168CC /* PlayerModule */,
-				FE46EE59255BB714008168CC /* LoginModule */,
+				FE46EE7D255BF3C3008168CC /* Controllers */,
+				FE46EE7C255BF3AD008168CC /* Models */,
+				FE46EE7B255BF397008168CC /* ViewModels */,
+				FE46EE7A255BF388008168CC /* Service */,
 				FE46EE58255BB5DF008168CC /* Support Files */,
 				FE46EE56255BB58E008168CC /* Resources */,
+				FE46EE6C255BCBF9008168CC /* Common */,
 				FE46EE57255BB5C1008168CC /* App */,
 			);
 			path = VideoPlayer;
@@ -521,6 +471,8 @@
 			files = (
 				FE7CB67D255BAB7900B5034F /* LoginViewController.swift in Sources */,
 				FE7CB679255BAB7900B5034F /* AppDelegate.swift in Sources */,
+				FE46EE76255BCCA6008168CC /* Alert.swift in Sources */,
+				FE46EE6E255BCC23008168CC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
