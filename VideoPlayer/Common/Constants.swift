@@ -8,5 +8,5 @@
 import Foundation
 
 enum VideoURL {
-    static let url = "https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4"
+    static let url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
 }

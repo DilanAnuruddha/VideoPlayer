@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        txtUName.text = ""
+        txtUPassword.text = ""
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
 

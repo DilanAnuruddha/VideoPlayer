@@ -22,7 +22,6 @@
 		FE7CB685255BAB7C00B5034F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7CB683255BAB7C00B5034F /* LaunchScreen.storyboard */; };
 		FE7CB690255BAB7D00B5034F /* VideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB68F255BAB7D00B5034F /* VideoPlayerTests.swift */; };
 		FE7CB69B255BAB7D00B5034F /* VideoPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB69A255BAB7D00B5034F /* VideoPlayerUITests.swift */; };
-		FEABBBE8255C32D100CF1C05 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEABBBE7255C32D100CF1C05 /* PlayerView.swift */; };
 		FEABBBFE255C60E800CF1C05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEABBBFD255C60E800CF1C05 /* GoogleService-Info.plist */; };
 		FEE7F837255CEE4400A8E471 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F836255CEE4400A8E471 /* FirebaseAuthManager.swift */; };
 		FEE7F83C255CEF6000A8E471 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F83B255CEF6000A8E471 /* SignupViewController.swift */; };
@@ -75,7 +74,6 @@
 		FE7CB696255BAB7D00B5034F /* VideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7CB69A255BAB7D00B5034F /* VideoPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerUITests.swift; sourceTree = "<group>"; };
 		FE7CB69C255BAB7D00B5034F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FEABBBE7255C32D100CF1C05 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		FEABBBFD255C60E800CF1C05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FEE7F836255CEE4400A8E471 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		FEE7F83B255CEF6000A8E471 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				FE7BA3B3255BFA49009F0959 /* PaddingTextField.swift */,
-				FEABBBE7255C32D100CF1C05 /* PlayerView.swift */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -501,7 +498,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE7F846255CFB1600A8E471 /* Components.swift in Sources */,
-				FEABBBE8255C32D100CF1C05 /* PlayerView.swift in Sources */,
 				FE7BA39B255BF5EB009F0959 /* Extensions.swift in Sources */,
 				FEE7F83C255CEF6000A8E471 /* SignupViewController.swift in Sources */,
 				FE7BA3BE255C0302009F0959 /* PlayerViewController.swift in Sources */,
