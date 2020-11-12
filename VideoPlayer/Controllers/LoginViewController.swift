@@ -62,6 +62,8 @@ class LoginViewController: UIViewController {
         return lbl
     }()
     
+    let (loader,loaderBackground) = Components.getLoaderViewSet()
+    
     //MARK: SetupUI
     func setupView()  {
         view.addSubViews(lblTitle,txtUName,txtUPassword,btnLogin,lblDescription)
@@ -96,13 +98,40 @@ class LoginViewController: UIViewController {
 extension LoginViewController{
     
     @objc func didClickedBtnLogin(){
-        self.navigationController?.pushViewController(PlayerViewController(), animated: true)
+        Helper.validateLogin(uName: txtUName.text!, uPassword: txtUPassword.text!) { (response) in
+            switch response{
+            case .success(_):
+                self.userLogin()
+            case .failure(.emptyMail):Alert.showRequiredFieldAlert(on: self, message: "Email cannot be empty.")
+            case .failure(.invalidMail):Alert.showRequiredFieldAlert(on: self, message: "Please enter valid email address.")
+            case .failure(.emptyPassword):Alert.showRequiredFieldAlert(on: self, message: "Passowrd cannot be empty")
+            default:break
+            }
+        }
     }
     
     @objc func didTappedLblDesc(_ sender: UITapGestureRecognizer){
         let vc = SignupViewController()
         vc.modalPresentationStyle = .pageSheet
         self.present(vc, animated: true)
+    }
+    
+    fileprivate func userLogin(){
+        if CheckConnection.isConnected() {
+            let loginManager = FirebaseAuthManager()
+            addLoaderToView(view: self.view, loader: loader, loaderBackground: loaderBackground)
+            loginManager.signIn(email: txtUName.text!, pass: txtUPassword.text!) {(granted) in
+                if granted {
+                    self.removeLoader(loader: self.loader, loaderBackground: self.loaderBackground)
+                    self.navigationController?.pushViewController(PlayerViewController(), animated: true)
+                } else {
+                    self.removeLoader(loader: self.loader, loaderBackground: self.loaderBackground)
+                    Alert.showErrorAlert(on: self)
+                }
+            }
+        }else{
+            Alert.showNoConnectionAlert(on: self)
+        }
     }
 }
 
