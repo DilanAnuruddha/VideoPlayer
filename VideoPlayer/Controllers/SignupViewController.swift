@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class SignupViewController: UIViewController {
 
@@ -86,6 +87,7 @@ extension SignupViewController {
     }
     
     fileprivate func signUp(){
+        Analytics.logEvent(FirebaseAnalyticKey.SIGNUP_BUTTON_PRESS, parameters: nil)
         if CheckConnection.isConnected() {
             addLoaderToView(view: self.view, loader: loader, loaderBackground: loaderBackground)
             let signUpManager = FirebaseAuthManager()

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class LoginViewController: UIViewController {
 
@@ -100,6 +101,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController{
     
     @objc func didClickedBtnLogin(){
+        Analytics.logEvent(FirebaseAnalyticKey.LOGIN_BUTTON_PRESS, parameters: nil)
         Helper.validateLogin(uName: txtUName.text!, uPassword: txtUPassword.text!) { (response) in
             switch response{
             case .success(_):
@@ -113,6 +115,7 @@ extension LoginViewController{
     }
     
     @objc func didTappedLblDesc(_ sender: UITapGestureRecognizer){
+        Analytics.logEvent(FirebaseAnalyticKey.SIGNUP_LINK_CLICK, parameters: nil)
         let vc = SignupViewController()
         vc.modalPresentationStyle = .pageSheet
         self.present(vc, animated: true)

@@ -8,9 +8,10 @@
 import UIKit
 import AVFoundation
 import AVKit
+import FirebaseAnalytics
 
 class PlayerViewController: UIViewController {
-    var playerViewController=AVPlayerViewController()
+    var avPlayerVC=AVPlayerViewController()
     var playerView:AVPlayer = AVPlayer()
 
     override func viewDidLoad() {
@@ -37,16 +38,29 @@ class PlayerViewController: UIViewController {
     
     //MARK: Setup UI
     func setupView()  {
-        view.addSubViews(playerViewController.view)
+        view.addSubViews(avPlayerVC.view)
         NSLayoutConstraint.activate([
-            playerViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            playerViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            playerViewController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            playerViewController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            avPlayerVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            avPlayerVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            avPlayerVC.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            avPlayerVC.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
-        
-        playerViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        avPlayerVC.delegate = self
+        avPlayerVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
+}
+
+//MARK: AVPlayerViewController Delegates
+extension PlayerViewController:AVPlayerViewControllerDelegate{
+    func playerViewController(_ playerViewController: AVPlayerViewController, willBeginFullScreenPresentationWithAnimationCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+
+        Analytics.logEvent(FirebaseAnalyticKey.START_FULL_SCREEN, parameters: nil)
+    }
+    
+    func playerViewController(_ playerViewController: AVPlayerViewController, willEndFullScreenPresentationWithAnimationCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        Analytics.logEvent(FirebaseAnalyticKey.END_FULL_SCREEN, parameters: nil)
+    }
+    
 }
 
 
@@ -68,9 +82,9 @@ extension PlayerViewController{
         playerView = AVPlayer(url: URL(string: VideoURL.url)!)
         playerView.actionAtItemEnd = .pause
         
-        playerViewController.player = playerView
-        playerViewController.player?.playImmediately(atRate: 1.0)
-        playerViewController.player?.play()
+        avPlayerVC.player = playerView
+        avPlayerVC.player?.playImmediately(atRate: 1.0)
+        avPlayerVC.player?.play()
     }
     
 }

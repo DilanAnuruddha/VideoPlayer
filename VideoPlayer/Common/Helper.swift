@@ -47,3 +47,13 @@ enum LoginError:Error {
     case mismatchPassword
 }
 
+//MARK:Firebase Anaytics Keys
+enum FirebaseAnalyticKey{
+    static let LOGIN_BUTTON_PRESS = "login_button_press"
+    static let SIGNUP_LINK_CLICK = "signup_link_click"
+    static let SIGNUP_BUTTON_PRESS = "signup_button_press"
+    static let LOGOUT_BUTTON_PRESS = "logout_button_press"
+    static let START_FULL_SCREEN = "start_full_screen"
+    static let END_FULL_SCREEN = "end_full_screen"
+}
+

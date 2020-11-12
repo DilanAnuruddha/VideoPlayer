@@ -22,11 +22,11 @@
 		FE7CB685255BAB7C00B5034F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7CB683255BAB7C00B5034F /* LaunchScreen.storyboard */; };
 		FE7CB690255BAB7D00B5034F /* VideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB68F255BAB7D00B5034F /* VideoPlayerTests.swift */; };
 		FE7CB69B255BAB7D00B5034F /* VideoPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB69A255BAB7D00B5034F /* VideoPlayerUITests.swift */; };
-		FEABBBFE255C60E800CF1C05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEABBBFD255C60E800CF1C05 /* GoogleService-Info.plist */; };
 		FEE7F837255CEE4400A8E471 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F836255CEE4400A8E471 /* FirebaseAuthManager.swift */; };
 		FEE7F83C255CEF6000A8E471 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F83B255CEF6000A8E471 /* SignupViewController.swift */; };
 		FEE7F841255CF4D700A8E471 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F840255CF4D700A8E471 /* Helper.swift */; };
 		FEE7F846255CFB1600A8E471 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F845255CFB1600A8E471 /* Components.swift */; };
+		FEE7F852255D8B9C00A8E471 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEE7F851255D8B9C00A8E471 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,11 +74,11 @@
 		FE7CB696255BAB7D00B5034F /* VideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7CB69A255BAB7D00B5034F /* VideoPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerUITests.swift; sourceTree = "<group>"; };
 		FE7CB69C255BAB7D00B5034F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FEABBBFD255C60E800CF1C05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FEE7F836255CEE4400A8E471 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		FEE7F83B255CEF6000A8E471 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		FEE7F840255CF4D700A8E471 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		FEE7F845255CFB1600A8E471 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		FEE7F851255D8B9C00A8E471 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +205,7 @@
 			children = (
 				FE7CB677255BAB7900B5034F /* VideoPlayer */,
 				FE7CB686255BAB7C00B5034F /* Info.plist */,
-				FEABBBFD255C60E800CF1C05 /* GoogleService-Info.plist */,
+				FEE7F851255D8B9C00A8E471 /* GoogleService-Info.plist */,
 				FE7CB683255BAB7C00B5034F /* LaunchScreen.storyboard */,
 				FE7CB678255BAB7900B5034F /* AppDelegate.swift */,
 				FE7CB68E255BAB7D00B5034F /* VideoPlayerTests */,
@@ -369,7 +369,7 @@
 			files = (
 				FE7CB685255BAB7C00B5034F /* LaunchScreen.storyboard in Resources */,
 				FE7CB682255BAB7C00B5034F /* Assets.xcassets in Resources */,
-				FEABBBFE255C60E800CF1C05 /* GoogleService-Info.plist in Resources */,
+				FEE7F852255D8B9C00A8E471 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
