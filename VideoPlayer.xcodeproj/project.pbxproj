@@ -24,6 +24,10 @@
 		FE7CB69B255BAB7D00B5034F /* VideoPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7CB69A255BAB7D00B5034F /* VideoPlayerUITests.swift */; };
 		FEABBBE8255C32D100CF1C05 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEABBBE7255C32D100CF1C05 /* PlayerView.swift */; };
 		FEABBBFE255C60E800CF1C05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEABBBFD255C60E800CF1C05 /* GoogleService-Info.plist */; };
+		FEE7F837255CEE4400A8E471 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F836255CEE4400A8E471 /* FirebaseAuthManager.swift */; };
+		FEE7F83C255CEF6000A8E471 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F83B255CEF6000A8E471 /* SignupViewController.swift */; };
+		FEE7F841255CF4D700A8E471 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F840255CF4D700A8E471 /* Helper.swift */; };
+		FEE7F846255CFB1600A8E471 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F845255CFB1600A8E471 /* Components.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		FE7CB69C255BAB7D00B5034F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEABBBE7255C32D100CF1C05 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		FEABBBFD255C60E800CF1C05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FEE7F836255CEE4400A8E471 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		FEE7F83B255CEF6000A8E471 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		FEE7F840255CF4D700A8E471 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		FEE7F845255CFB1600A8E471 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +165,8 @@
 				FE46EE75255BCCA6008168CC /* Alert.swift */,
 				FE7BA39A255BF5EB009F0959 /* Extensions.swift */,
 				FE7BA3B8255C0241009F0959 /* CheckConnection.swift */,
+				FEE7F840255CF4D700A8E471 /* Helper.swift */,
+				FEE7F845255CFB1600A8E471 /* Components.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -164,6 +174,7 @@
 		FE46EE7A255BF388008168CC /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				FEE7F836255CEE4400A8E471 /* FirebaseAuthManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -187,6 +198,7 @@
 			children = (
 				FE7CB67C255BAB7900B5034F /* LoginViewController.swift */,
 				FE7BA3BD255C0302009F0959 /* PlayerViewController.swift */,
+				FEE7F83B255CEF6000A8E471 /* SignupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -488,15 +500,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEE7F846255CFB1600A8E471 /* Components.swift in Sources */,
 				FEABBBE8255C32D100CF1C05 /* PlayerView.swift in Sources */,
 				FE7BA39B255BF5EB009F0959 /* Extensions.swift in Sources */,
+				FEE7F83C255CEF6000A8E471 /* SignupViewController.swift in Sources */,
 				FE7BA3BE255C0302009F0959 /* PlayerViewController.swift in Sources */,
 				FE7BA3B4255BFA49009F0959 /* PaddingTextField.swift in Sources */,
+				FEE7F837255CEE4400A8E471 /* FirebaseAuthManager.swift in Sources */,
 				FE7CB67D255BAB7900B5034F /* LoginViewController.swift in Sources */,
 				FE7CB679255BAB7900B5034F /* AppDelegate.swift in Sources */,
 				FE7BA3B9255C0241009F0959 /* CheckConnection.swift in Sources */,
 				FE46EE76255BCCA6008168CC /* Alert.swift in Sources */,
 				FE46EE6E255BCC23008168CC /* Constants.swift in Sources */,
+				FEE7F841255CF4D700A8E471 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
