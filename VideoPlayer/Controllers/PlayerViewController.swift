@@ -165,18 +165,19 @@ extension PlayerViewController{
     fileprivate func setupVideoView(){
         if CheckConnection.isConnected() {
             /* Video play using remote URL*/
-//            guard let url = URL(string: VideoURL.url) else {
-//                    return
-//            }
+           guard let url = URL(string: VideoURL.url) else {
+                   return
+           }
             
             /* Video play using local URL*/
-            guard let path = Bundle.main.path(forResource: "BigBuckBunny", ofType:"mp4") else {
-                debugPrint("BigBuckBunny.mp4 not found")
-                return
-            }
+//             guard let path = Bundle.main.path(forResource: "BigBuckBunny", ofType:"mp4") else {
+//                 debugPrint("BigBuckBunny.mp4 not found")
+//                 return
+//             }
+            //URL(fileURLWithPath: path)
             
             
-            player = AVPlayer(url: URL(fileURLWithPath: path))
+            player = AVPlayer(url: url)
             playerLayer = AVPlayerLayer(player: player)
             playerLayer?.frame = playerView.bounds;
             playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
