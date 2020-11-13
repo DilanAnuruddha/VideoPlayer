@@ -57,5 +57,9 @@ enum FirebaseAnalyticKey{
     static let LOGOUT_BUTTON_PRESS = "logout_button_press"
     static let START_FULL_SCREEN = "start_full_screen"
     static let END_FULL_SCREEN = "end_full_screen"
+    static let VIDEO_PLAY_PAUSE = "video_play_pause"
+    static let VIDEO_GO_BACKWARD = "video_go_backward"
+    static let VIDEO_GO_FORWARD = "video_go_forward"
+    static let TIMELINE_VALUE_CHANGE = "timeline_changed"
 }
 

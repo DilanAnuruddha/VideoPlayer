@@ -218,6 +218,7 @@ extension PlayerViewController{
         let value = Float64(timeLine.value) * CMTimeGetSeconds(player.currentItem?.duration ?? CMTimeMake(value: 1, timescale: 10))
         let seekTime = CMTime(value: CMTimeValue(value), timescale: 1)
         player.seek(to: seekTime )
+        Analytics.logEvent(FirebaseAnalyticKey.TIMELINE_VALUE_CHANGE, parameters: ["current_time":value])
     }
     
     @objc func didClickedPlayPause(){
@@ -228,18 +229,21 @@ extension PlayerViewController{
             btnPlayPause.setImage(UIImage(systemName: "play.fill",withConfiguration: SFSymbolConfig.largeConfig)?.withTintColor(.white,renderingMode: .alwaysOriginal), for: .normal)
             player.pause()
         }
+        Analytics.logEvent(FirebaseAnalyticKey.VIDEO_PLAY_PAUSE, parameters: ["new_satatus":player.isPlaying ? "pause" : "play"])
     }
     
     @objc func didClickedBtnBacward(){
         let newTime =  CMTimeGetSeconds(player.currentTime()).advanced(by: -15)
         let seekTime = CMTime(value: CMTimeValue(newTime), timescale: 1)
         player.seek(to: seekTime)
+        Analytics.logEvent(FirebaseAnalyticKey.VIDEO_GO_BACKWARD, parameters: ["current_time":player.currentTime()])
     }
     
     @objc func didClickedBtnForward(){
-            let newTime =  CMTimeGetSeconds(player.currentTime()).advanced(by: 15)
-            let seekTime = CMTime(value: CMTimeValue(newTime), timescale: 1)
-            player.seek(to: seekTime)
+        let newTime =  CMTimeGetSeconds(player.currentTime()).advanced(by: 15)
+        let seekTime = CMTime(value: CMTimeValue(newTime), timescale: 1)
+        player.seek(to: seekTime)
+        Analytics.logEvent(FirebaseAnalyticKey.VIDEO_GO_FORWARD, parameters: ["current_time":player.currentTime()])
     }
     
     func resetTimer() {
