@@ -16,6 +16,7 @@ class PlayerViewController: UIViewController {
     var player:AVPlayer = AVPlayer()
     var timeObserver: Any?
     var timer: Timer?
+    var isFullScreen:Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +44,12 @@ class PlayerViewController: UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-            coordinator.animate(alongsideTransition: { (context) in
-            }) { (context) in
-                self.playerLayer?.frame.size = size
-                self.playerView.frame.size = size
-            }
+        coordinator.animate(alongsideTransition: { (context) in
+        }) { (context) in
+            self.playerLayer?.frame.size = size
+            self.playerView.frame.size = size
+        }
+
     }
     
     //MARK: Components
@@ -89,15 +91,21 @@ class PlayerViewController: UIViewController {
         return btn
     }()
     
+    let btnFullScreen:UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setImage(UIImage(systemName: "rectangle",withConfiguration: SFSymbolConfig.largeConfig)?.withTintColor(.white,renderingMode: .alwaysOriginal), for: .normal)
+        return btn
+    }()
+    
     
     //MARK: Setup UI
     func setupView()  {
-        view.addSubViews(playerView,btnPlayPause,lblTime,timeLine,btnForward,btnBackward)
+        view.addSubViews(playerView,btnPlayPause,lblTime,timeLine,btnForward,btnBackward,btnFullScreen)
         NSLayoutConstraint.activate([
             playerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             playerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            playerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            playerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            playerView.topAnchor.constraint(equalTo: view.topAnchor),
+            playerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             btnPlayPause.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             btnPlayPause.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -121,12 +129,18 @@ class PlayerViewController: UIViewController {
             btnForward.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             btnForward.widthAnchor.constraint(equalToConstant: 50),
             btnForward.heightAnchor.constraint(equalToConstant: 50),
+            
+            btnFullScreen.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 16),
+            btnFullScreen.bottomAnchor.constraint(equalTo: timeLine.topAnchor,constant: -8),
+            btnFullScreen.widthAnchor.constraint(equalToConstant: 30),
+            btnFullScreen.heightAnchor.constraint(equalToConstant: 20),
         ])
         view.sendSubviewToBack(playerView)
         btnPlayPause.addTarget(self, action: #selector(didClickedPlayPause), for: .touchUpInside)
         timeLine.addTarget(self, action: #selector(didTimeLineValueChanged(_:)), for: .valueChanged)
         btnBackward.addTarget(self, action: #selector(didClickedBtnBacward), for: .touchUpInside)
         btnForward.addTarget(self, action: #selector(didClickedBtnForward), for: .touchUpInside)
+        btnFullScreen.addTarget(self, action: #selector(didClickedBtnFullScreen), for: .touchUpInside)
 
     }
     
@@ -150,10 +164,12 @@ extension PlayerViewController{
     
     fileprivate func setupVideoView(){
         if CheckConnection.isConnected() {
+            /* Video play using remote URL*/
 //            guard let url = URL(string: VideoURL.url) else {
 //                    return
 //            }
             
+            /* Video play using local URL*/
             guard let path = Bundle.main.path(forResource: "BigBuckBunny", ofType:"mp4") else {
                 debugPrint("BigBuckBunny.mp4 not found")
                 return
@@ -161,7 +177,6 @@ extension PlayerViewController{
             
             
             player = AVPlayer(url: URL(fileURLWithPath: path))
-
             playerLayer = AVPlayerLayer(player: player)
             playerLayer?.frame = playerView.bounds;
             playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
@@ -177,13 +192,6 @@ extension PlayerViewController{
             Alert.showNoConnectionAlert(on: self)
         }
         
-//        player = AVPlayer(url: URL(string: VideoURL.url)!)
-//        player.actionAtItemEnd = .pause
-//
-//
-//        avPlayerVC.player = player
-//        avPlayerVC.player?.playImmediately(atRate: 1.0)
-//        avPlayerVC.player?.play()
     }
     
     func updateTimeLine() {
@@ -246,6 +254,21 @@ extension PlayerViewController{
         Analytics.logEvent(FirebaseAnalyticKey.VIDEO_GO_FORWARD, parameters: ["current_time":player.currentTime()])
     }
     
+    @objc func didClickedBtnFullScreen(){
+        //change player layer video gravity.
+        if !isFullScreen {
+            isFullScreen = true
+            playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            btnFullScreen.setImage(UIImage(systemName: "arrow.down.left.square",withConfiguration: SFSymbolConfig.smallConfig)?.withTintColor(.white,renderingMode: .alwaysOriginal), for: .normal)
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+        }else{
+            isFullScreen = false
+            playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
+            btnFullScreen.setImage(UIImage(systemName: "rectangle",withConfiguration: SFSymbolConfig.smallConfig)?.withTintColor(.white,renderingMode: .alwaysOriginal), for: .normal)
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+    }
+    
     func resetTimer() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(hideControls), userInfo: nil, repeats: false)
@@ -257,6 +280,7 @@ extension PlayerViewController{
         lblTime.isHidden = true
         btnForward.isHidden = true
         btnBackward.isHidden = true
+        btnFullScreen.isHidden = true
     }
     
     @objc func toggleControls() {
@@ -265,6 +289,7 @@ extension PlayerViewController{
         btnForward.isHidden = !btnForward.isHidden
         timeLine.isHidden = !timeLine.isHidden
         lblTime.isHidden = !lblTime.isHidden
+        btnFullScreen.isHidden = !btnFullScreen.isHidden
         resetTimer()
     }
 }
