@@ -27,7 +27,7 @@ class Components {
         loader.style = UIActivityIndicatorView.Style.large
         loader.color = .systemBackground
 
-            //loader background
+        //loader background
         let view = UIView()
         view.backgroundColor = UIColor(named: "systemColor_inverse")?.withAlphaComponent(0.8)
         view.clipsToBounds = true

@@ -37,6 +37,8 @@ class Helper{
             completionHandler(.success(true))
         }
     }
+    
+    
 }
 
 //MARK: Login error

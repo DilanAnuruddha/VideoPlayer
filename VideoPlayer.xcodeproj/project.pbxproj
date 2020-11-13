@@ -27,6 +27,7 @@
 		FEE7F841255CF4D700A8E471 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F840255CF4D700A8E471 /* Helper.swift */; };
 		FEE7F846255CFB1600A8E471 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F845255CFB1600A8E471 /* Components.swift */; };
 		FEE7F852255D8B9C00A8E471 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEE7F851255D8B9C00A8E471 /* GoogleService-Info.plist */; };
+		FEF5F5D9255E31C4006A010D /* BigBuckBunny.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FEF5F5D8255E31AA006A010D /* BigBuckBunny.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		FEE7F840255CF4D700A8E471 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		FEE7F845255CFB1600A8E471 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		FEE7F851255D8B9C00A8E471 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FEF5F5D8255E31AA006A010D /* BigBuckBunny.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BigBuckBunny.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				FE7CB677255BAB7900B5034F /* VideoPlayer */,
 				FE7CB686255BAB7C00B5034F /* Info.plist */,
 				FEE7F851255D8B9C00A8E471 /* GoogleService-Info.plist */,
+				FEF5F5D8255E31AA006A010D /* BigBuckBunny.mp4 */,
 				FE7CB683255BAB7C00B5034F /* LaunchScreen.storyboard */,
 				FE7CB678255BAB7900B5034F /* AppDelegate.swift */,
 				FE7CB68E255BAB7D00B5034F /* VideoPlayerTests */,
@@ -367,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF5F5D9255E31C4006A010D /* BigBuckBunny.mp4 in Resources */,
 				FE7CB685255BAB7C00B5034F /* LaunchScreen.storyboard in Resources */,
 				FE7CB682255BAB7C00B5034F /* Assets.xcassets in Resources */,
 				FEE7F852255D8B9C00A8E471 /* GoogleService-Info.plist in Resources */,

@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import AVFoundation
+import AVKit
 
 extension UIView{
     
@@ -54,4 +56,10 @@ extension String {
           let testEmail = NSPredicate(format:"SELF MATCHES %@", regularExpressionForEmail)
           return testEmail.evaluate(with: self)
        }
+}
+
+extension AVPlayer {
+    var isPlaying: Bool {
+        return rate != 0 && error == nil
+    }
 }
